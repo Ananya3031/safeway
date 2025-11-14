@@ -1,0 +1,21 @@
+
+:root{--bg:#f4f6f8;--card:#fff;--accent:#1f6feb;}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial; margin:0;background:var(--bg);color:#111}
+header{background:var(--card);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e6e9ee}
+header h1{font-size:18px;margin:0}
+.controls{display:flex;align-items:center;gap:10px}
+.controls input{width:90px;padding:6px}
+main{display:flex;gap:18px;padding:18px}
+#mapSection{flex:2;background:var(--card);padding:12px;border-radius:8px;min-height:560px}
+#map{height:520px;border-radius:6px}
+#panel{flex:1;background:var(--card);padding:12px;border-radius:8px;min-height:560px}
+#panel input{width:100%;padding:8px;margin:8px 0}
+#panel button{padding:8px 12px;margin-right:8px}
+ul#zonesList{list-style:none;padding:0;max-height:260px;overflow:auto}
+ul#zonesList li{padding:8px;border-bottom:1px solid #eef;margin:0;display:flex;justify-content:space-between;align-items:center}
+.modal{position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4)}
+.modal.hidden{display:none}
+.modal-content{background:var(--card);padding:18px;border-radius:8px;max-width:420px;text-align:center}
+button{cursor:pointer}
+small.note{display:block;color:#667; margin-top:8px}
