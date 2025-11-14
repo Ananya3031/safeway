@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafeWay — Geo Alert</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>SafeWay — Geo Alert (Web)</h1>
+    <div class="controls">
+      <button id="locateBtn">Use My Location</button>
+      <label>Alert radius (meters): <input id="radiusInput" type="number" value="150" /></label>
+      <button id="showUnsafe">Show Unsafe Zones</button>
+      <button id="clearBtn">Clear Zones</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="mapSection">
+      <div id="map"></div>
+    </section>
+
+    <section id="panel">
+      <h2>Admin — Add Unsafe Zone</h2>
+      <p>Click on the map to add a zone, or enter coordinates below.</p>
+      <input id="name" placeholder="Zone name (e.g. Dark Alley)" />
+      <input id="coords" placeholder="lat,lng (e.g. 18.5204,73.8567)" />
+      <button id="addBtn">Add Zone</button>
+
+      <h3>Existing Unsafe Zones</h3>
+      <ul id="zonesList"></ul>
+    </section>
+  </main>
+
+  <!-- Alert Modal -->
+  <div id="alertModal" class="modal hidden" role="dialog" aria-live="assertive">
+    <div class="modal-content">
+      <h2>⚠️ Unsafe Area Nearby</h2>
+      <p id="alertText"></p>
+      <button id="dismissAlert">Dismiss</button>
+      <button id="sosBtn">Call Emergency</button>
+    </div>
+  </div>
+
+  <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
